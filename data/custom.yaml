@@ -1,0 +1,16 @@
+# COCO 2017 dataset http://cocodataset.org
+
+# download command/URL (optional)
+download: bash ./scripts/get_coco.sh
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ./coco/train2017.txt  # 2.4k images Change the path here according to your  dataset it also contain the tha the test and valid data but we have use here just the training data 
+s
+                                   
+
+
+# number of classes
+nc: 3
+
+# class names
+names: [ 'Meningima', 'Glioma', 'Pitiuitary' ]
