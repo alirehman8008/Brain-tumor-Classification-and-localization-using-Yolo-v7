@@ -1,6 +1,7 @@
 
-# Project Title
+# Project 
 🧠 Brain Tumor Detection Using YOLO v7
+
 Implemented a deep learning model using YOLO v7 to detect three types of brain tumors: meningioma, glioma, and pituitary. Achieved an impressive 96.7% accuracy!
 
 Tools: Python, TensorFlow, OpenCV
