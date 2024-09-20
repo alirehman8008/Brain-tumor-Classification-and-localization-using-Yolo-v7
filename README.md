@@ -1,32 +1,32 @@
+
 # Project Title
-Brain Tumor Classification and localization Using Yolo V7
-A brief description of what this project does and who it's for
+🧠 Brain Tumor Detection Using YOLO v7
+Implemented a deep learning model using YOLO v7 to detect three types of brain tumors: meningioma, glioma, and pituitary. Achieved an impressive 96.7% accuracy!
 
-## Steps For Implementation:
-Open google colab.
-       
-       # Mounting the drive to gdrive 
-       from google.colab import drive 
-       drive.mount("/content/gdrive")
+Tools: Python, TensorFlow, OpenCV
+Techniques: YOLO v7
 
-       # changing to data set directory      
-       %cd /content/gdrive/MyDrive/yolo-training-dataset
+🖼️ Image Annotation for Brain Tumor Dataset
+Annotated 3,000 brain tumor images using LabelImg and Roboflow for training the detection models.
 
-       # Colning yolo v7 repository 
-       !git clone https://github.com/WongKinYiu/yolov7.git
-       
-       # Changing to yolo v7 drive
-       cd yolov7
-       
-       # Installing requirements file for yolov7
-       !pip install -r requirements.txt
+Types of Tumors: Meningioma, Glioma, Pituitary
+Tools: LabelImg, Roboflow
 
-        # Gettinng yolov7 training file.
-        !wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
+🔄 Data Preprocessing & Augmentation
+Processed and augmented the annotated dataset to enhance model performance by increasing data variability. Techniques included resizing, normalization, and random transformations to improve model generalization.
 
-        # Traning the modle and tune the parameter epoch and bacthsize.
-        !python train.py --workers 8 --device 0  --batch-size 8 --data custom.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights 'yolov7.py' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml --epoch 60
+Tools: Python, OpenCV, TensorFlow
+Techniques: Resizing, Normalization, Data Augmentation (rotation, flipping, zoom)
 
+🤖 Model Training & Optimization
+Trained a deep learning model using YOLO v7 to detect brain tumors. Focused on optimizing the model with hyperparameter tuning and reducing overfitting.
 
-        # Model Prediction
-        !python detect.py --weights yolov7_custom.pt --conf 0.2 --img-size 640 --source /content/gdrive/MyDrive/fyp/yolo-training-dataset/yolov7/Testing/pituitary_tumor
+Tools: TensorFlow, PyTorch, YOLO v7
+Techniques: Transfer learning, Hyperparameter tuning, Early stopping
+
+📊 Model Evaluation & Validation
+Evaluated the trained model on a test dataset, achieving 96.7% accuracy. Used performance metrics such as precision, recall, F1-score, and confusion matrix to validate the model's effectiveness in detecting brain tumors.
+
+Tools: Scikit-learn, TensorFlow
+Metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix
+
